@@ -1,13 +1,12 @@
 import Banner from "./components/Banner";
 import Container from "./components/Container";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <>
-      <Banner />
-      <Container>
-        <h2>test123</h2>
-      </Container>
+      <Banner />      
+      <Navbar />
     </>
   );
 }
