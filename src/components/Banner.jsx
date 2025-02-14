@@ -8,7 +8,7 @@ export default function Banner() {
   return (
     <div className="py-10 bg-[#28242c]">
       <Container>
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center p-2">
           <div>
             <h1 className="text-3xl md:text-5xl font-bold text-white my-5">
               Shafiul Anam
@@ -22,12 +22,12 @@ export default function Banner() {
               />
             </h2>
 
-            <button className="btn bg-[#FFC400] border-[0px]">
-              <Download  size={16} className= 'animate__animated animate__heartBeat animate__infinite	animate__slower' />
+            <button className="btn flex items-center px-4 py-2 bg-[#FFC400] rounded-lg font-semibold border-0">
+              <Download  size={16} className= 'w-5 h-5 mr-2 ' />
               Download Resume
             </button>
           </div>
-          <div className="avatar">
+          <div className="avatar hidden sm:inline">
             <div className="w-48 rounded-full">
               <img src={pp} />
             </div>
