@@ -9,7 +9,7 @@ import {
 
 export default function Navbar() {
   return (
-    <nav className="fixed top-70 left-0 right-0 bg-white shadow-md">
+    <nav className="fixed top-0 left-0 right-0 bg-white shadow-md">
       <div className=" mx-auto px-4 md:px-8 lg:px-10">
         <div className="flex items-center justify-between h-16">
           {/* Company Name */}
