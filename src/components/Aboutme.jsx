@@ -4,7 +4,7 @@ import Lottie from "lottie-react";
 
 export default function Aboutme() {
   return (
-    <div className="bg-[#28242c] py-20">
+    <div className="bg-[#28242c] py-20" id="about">
       <div className="max-w-6xl mx-auto px-4">
         {/* Section Title */}
         <h2 className="text-4xl font-bold text-white mb-12 text-center animate__animated animate__fadeInDown">
@@ -26,9 +26,7 @@ export default function Aboutme() {
               As an Electrical and Electronic Engineering graduate turned web
               developer, I discovered my true calling in the world of coding.
               From my base in vibrant Dhaka, I craft interactive web
-              applications that bridge technology with human experience. I find
-              joy in transforming complex problems into elegant, user-friendly
-              solutions.
+              applications that bridge technology with human experience. 
             </p>
 
             <p className="text-gray-300 leading-relaxed">

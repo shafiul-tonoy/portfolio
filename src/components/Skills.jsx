@@ -1,74 +1,42 @@
-import { Code2, Database, Server, Zap, Cpu, Layout, Cloud, Terminal, GitBranch, Paintbrush, Smartphone, Globe } from 'lucide-react';
-import 'animate.css';
+import { FaHtml5, FaCss3Alt, FaJs, FaReact } from "react-icons/fa";
+import { SiTailwindcss } from "react-icons/si";
+
+const skills = [
+  { title: "HTML", icon: <FaHtml5 className="text-orange-500 text-6xl" /> },
+  { title: "CSS", icon: <FaCss3Alt className="text-blue-500 text-6xl" /> },
+  { title: "JavaScript", icon: <FaJs className="text-yellow-500 text-6xl" /> },
+  { title: "Tailwind CSS", icon: <SiTailwindcss className="text-cyan-500 text-6xl" /> },
+  { title: "React", icon: <FaReact className="text-blue-400 text-6xl animate-spin-slow" /> },
+];
+
+const SkillCard = ({ icon, title }) => {
+  return (
+    <div className="group relative p-6 bg-gray-800 rounded-xl transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl border border-gray-700">
+      <div className="flex flex-col items-center space-y-4">
+        <div className="w-16 h-16 flex items-center justify-center">{icon}</div>
+        <h3 className="text-lg font-semibold text-gray-100">{title}</h3>
+      </div>
+    </div>
+  );
+};
 
 const Skills = () => {
-  const categories = [
-    {
-      name: "Frontend Development",
-      skills: [
-        { name: "HTML", icon: <Layout className="w-10 h-10" style={{ color: "#E44D26" }} /> },
-        { name: "CSS", icon: <Layout className="w-10 h-10" style={{ color: "#264DE4" }} /> },
-        { name: "JavaScript", icon: <Zap className="w-10 h-10" style={{ color: "#F7DF1E" }} /> },
-        { name: "React", icon: <Cpu className="w-10 h-10" style={{ color: "#61DAFB" }} /> },
-        { name: "Tailwind CSS", icon: <Cloud className="w-10 h-10" style={{ color: "#38B2AC" }} /> },
-      ],
-      animation: "animate__fadeInLeft"
-    },
-    {
-      name: "Backend Development",
-      skills: [
-        { name: "Node.js", icon: <Server className="w-10 h-10" style={{ color: "#339933" }} /> },
-        { name: "Express", icon: <Terminal className="w-10 h-10" style={{ color: "#000000" }} /> },
-        { name: "MongoDB", icon: <Database className="w-10 h-10" style={{ color: "#47A248" }} /> },
-      ],
-      animation: "animate__fadeInUp"
-    },
-    {
-      name: "Tools & Others",
-      skills: [
-        { name: "Git", icon: <GitBranch className="w-10 h-10" style={{ color: "#F05032" }} /> },
-        { name: "UI/UX Design", icon: <Paintbrush className="w-10 h-10" style={{ color: "#FF6F61" }} /> },        
-        { name: "Web Hosting", icon: <Globe className="w-10 h-10" style={{ color: "#00BFFF" }} /> },
-      ],
-      animation: "animate__fadeInRight"
-    }
-  ];
-
   return (
-    <div className="bg-[#28242c] py-20">
-      <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-4xl font-bold  mb-12 text-center animate__animated animate__fadeInDown text-white">
-          Skills
-        </h2>
+    <div className=" bg-gray-900 py-16 px-4" id="skills">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-bold text-gray-100 mb-4">
+            Technical Skills
+          </h2>
+          <p className="text-gray-400 max-w-2xl mx-auto">
+            My expertise spans across modern web technologies, focusing on
+            creating responsive and interactive user interfaces.
+          </p>
+        </div>
 
-        <div className="space-y-12">
-          {categories.map((category, index) => (
-            <div 
-              key={category.name}
-              className={`animate__animated ${category.animation}`}
-              style={{ animationDelay: `${index * 0.2}s` }}
-            >
-              <h3 className="text-2xl font-semibold text-white mb-6">
-                {category.name}
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {category.skills.map((skill, skillIndex) => (
-                  <div
-                    key={skill.name}
-                    className="bg-gray-800 rounded-lg p-6 hover:transform hover:scale-105 transition-all duration-300 group"
-                  >
-                    <div className="flex flex-col items-center gap-4">
-                      <div className="p-2 rounded-lg bg-gray-700 group-hover:bg-gray-600 transition-colors duration-300">
-                        {skill.icon}
-                      </div>
-                      <h4 className="text-xl font-semibold text-white text-center">
-                        {skill.name}
-                      </h4>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {skills.map((skill) => (
+            <SkillCard key={skill.title} icon={skill.icon} title={skill.title} />
           ))}
         </div>
       </div>
