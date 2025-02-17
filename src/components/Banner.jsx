@@ -7,21 +7,21 @@ const Banner = () => {
   const links = [
     {
       icon: Github,
-      url: "https://github.com/yourusername",
+      url: "https://github.com/shafiul-tonoy",
       label: "GitHub Profile",
       color: "#c9d1d9",
       hoverColor: "#58a6ff"
     },
     {
       icon: Linkedin,
-      url: "https://linkedin.com/in/yourusername",
+      url: "",
       label: "LinkedIn Profile",
       color: "#70b5f9",
       hoverColor: "#00a0dc"
     },
     {
       icon: Facebook,
-      url: "https://facebook.com/yourusername",
+      url: "https://www.facebook.com/AnamShafiul/",
       label: "Facebook Profile",
       color: "#4267B2",
       hoverColor: "#1877f2"
